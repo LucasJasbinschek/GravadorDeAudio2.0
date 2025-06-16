@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Audio Recorder</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Audio Recorder</h1>
+    
+    <div id="status">Pronto para gravar</div>
+    
+    <button id="recordButton" class="button">Iniciar Gravacao</button>
+    <button id="stopButton" class="button stop" disabled>Parar Gravacao</button>
+    <button id="playButton" class="button" disabled>Ouvir Gravacao</button>
+    <button id="uploadButton" class="button upload" disabled>Gerar link</button>
+    
+    <div id="result" class="hidden">
+      <h3>Link do Audio:</h3>
+      <a id="audioLink" target="_blank" rel="noopener noreferrer"></a>
+      <button id="copyButton" class="button small">Copiar Link</button>
+      <div id="expiryInfo"></div>
+    </div>
+  </div>
+
+  <script src="recorder.js"></script>
+  <script src="popup.js"></script>
+</body>
+</html>
