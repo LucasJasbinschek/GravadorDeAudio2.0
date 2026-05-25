@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
   stopButton.addEventListener('click', () => {
     const stopped = audioRecorder.stopRecording();
     if (stopped) {
-      statusDiv.textContent = "Gravacao concluida";
+      statusDiv.textContent = "Gravacao concluida!";
       recordButton.disabled = false;
       stopButton.disabled = true;
       playButton.disabled = false;
@@ -45,14 +45,14 @@ document.addEventListener('DOMContentLoaded', () => {
       playButton.disabled = true;
       
       audioRecorder.audio.addEventListener('ended', () => {
-        statusDiv.textContent = "Gravacao concluida";
+        statusDiv.textContent = "Gravacao concluida!";
         playButton.disabled = false;
       });
     }
   });
 
   uploadButton.addEventListener('click', async () => {
-    statusDiv.textContent = "Enviando para tmpfiles.org...";
+    statusDiv.textContent = "Enviando para tmpfiles.org, aguarde um momento.";
     uploadButton.disabled = true;
     
     try {

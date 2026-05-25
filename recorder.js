@@ -53,3 +53,4 @@ class AudioRecorder {
     return this.audioBlob;
   }
 }
+
